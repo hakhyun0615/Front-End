@@ -1,0 +1,52 @@
+<!DOCTYPE html> # 문서의 HTML 버전을 지정(현재 HTML5가 표준)
+<html lang="en"> # 문서의 전체 범위(HTML 문서가 어디에서 시작하고, 어디에서 끝나는지 알려주는 역할) 
+    <head> # 문서의 정보를 나타내는 범위(웹 브라우저가 해석해야 할 웹 페이지의 제목, 설명, 사용할 파일 위치, 스타일(CSS)같은 웹페이지의 보이지 않은 정보를 작성하는 범위)
+        # meta: HTML 문서의 제작자. 내용, 키워드 같은, 여러 정보를 검색엔진이나 브라우저에게 제공
+        <meta charset="UTF-8"> # 문자인코딩 방식(출력 방식)(UTF-8이 표준)
+        <meta name="author" content="HEROPY"> # 제작자 명시
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> # 뷰포트 속성 명시
+        # title: (탭에서 볼 수 있는)웹 페이지의 제목
+        <title>Document</title> 
+        # link: 외부 문서(대부분 css)를 가져와 연결할 때 사용
+        <link rel="stylesheet" href="./main.css"> # rel: 관계, href: 가져올 문서의 경로
+        <link rel="icon" href="./favicon.png">
+        # style: 스타일(CSS)를 HTML 문서 안에서 작성하는 경우에 사용
+        <style>
+            div {color: red; }
+            span {color: red; }
+        </style> # HTML 내부에서 작성된 CSS(권장X, 앞서 언급한대로 파일로 분류해서 가져와서 사용)
+        # script: 자바스크립트(JS) 파일을 가져오거나 HTML 문서 안에서 작성하는 경우
+        <script src="./main.js"></script> # JS파일을 가져오는 경우
+        <script>
+            console.log('Hello world!')
+        </script> # JS를 HTML 문서 안에서 작성하는 경우
+    </head>
+    <body> # 문서의 구조를 나타내는 범위(사용자 화면을 통해 보여지는 로고, 헤더, 푸터, 내비게이션, 메뉴, 버튼, 이미지 같은, 웹페이지의 보여지는 구조를 작성하는 범위)
+        # div(division): 특별한 의미가 없는 구분을 위한 블록요소
+        <div>
+            # h1(heading): 제목을 의미하는 블록요소(숫자가 작을수록 더 중요한 제목을 의미)
+            <h1>오늘의 날씨</h1>
+            # p(paragraph): 문장을 의미하는 블록요소
+            <p>중부 집중호우, 남부는 열대야, 12호 태풍 북상 중..</p>
+            # img(image): 이미지를 삽입하는 인라인요소
+            <img src="img/weather.jpg" alt="12호 태풍"> # src: 삽입할 이미지의 경로, alt: 이미지가 정상 출력이 안 될 때 삽입할 이미지의 이름
+        </div>
+        # ul(unordered list): 순서가 필요없는 목록의 집합을 의미(블록요소)
+        <ul>
+            # li(list item): 목록 내 각 항목(블록요소)
+            <li>사과</li>
+            <li>딸기</li>
+        </ul>
+        # a(anchor): 다른/같은 페이지로 이동하는 하이퍼링크를 지정하는 인라인요소
+        <a href="https://www.naver.com">Naver</a>
+        <a href="https://www.google.com" target="_blank">Google</a> # target: 새로운 탭에 출력할 것이지에 대한 여부
+        <p>
+            <span>동해물</span>과 백두산이<br> 마르고 닳도록 # span: 특별한 의미가 없는 구분을 위한 인라인요소(블록요소인 div와 비슷), br(break): 줄바꿈 인라인요소(enter키와 같은 역할)
+        </p>
+        # input: 사용자가 데이터를 입력하는 요소(인라인블록요소)
+        <input type="text" value="HEROPY!" placeholder="이름을 입력하세요" disabled> # value: 미리 입력된 값, placeholder: 사용자가 입력할 값의 힌트, disabled: 입력 요소 비활성화(입력 못하게)
+        # 주석: cmd + /
+        <!-- 주석 -->
+    </body>
+</html>
