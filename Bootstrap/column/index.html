@@ -6,13 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <!-- Bootstrap -->
-    <!-- CSS 없이도 이미 구현된 많은 UI 이용 가능 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
+    <!-- row -->
+    <!-- 하나의 행으로 12개의 열로 정의되어 있음 -->
+    <div class="row">
+        <!-- col -->
+        <!-- row에서 만들어지 12개의 열을 col이 나눠 먹는 구조 -->
+        <!-- 원래 3개이므로 4개 열씩인데 지금은 비율 알아서 배분해준 것 -->
+        <!-- col-md는 view port 크기가 미디움이 되면 비율이 바뀌도록 만든 것 -->
+        <div class="col-4 box">A</div>
+        <div class="col-5 col-md-7 box">B</div>
+        <div class="col-3 col-md-4 box">C</div>
+    </div>
 </body>
 </html>
